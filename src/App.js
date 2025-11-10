@@ -7,7 +7,6 @@ export default function Portfolio() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // CUSTOMIZE YOUR INFO HERE
   const portfolioData = {
     name: "Aditya Karun",
     role: "Software Developer",
@@ -16,20 +15,20 @@ export default function Portfolio() {
     email: "karunaditya77@gmail.com",
     github: "https://github.com/AdityaKarun",
     linkedin: "https://www.linkedin.com/in/aditya-karun-083a9a256/",
-    resume: "#", // Add your resume link here
+    resume: "/Aditya_Karun_Resume.pdf",
     
     experience: [
       {
         title: "Software Engineering Intern",
         company: "Pramana, an Evident Company",
-        period: "April 2025 – November 2025",
+        period: "April 2025 - November 2025",
         location: "Bengaluru",
         description: "Worked on real-time image processing pipelines for whole slide imaging (WSI) systems, focusing on system architecture, DICOM standards, and optimization.",
         achievements: [
           "Engineered a real-time message publishing system using RabbitMQ to relay scanning events to Docker-based image-processing algorithms, ensuring 100% synchronized updates and modular scalability",
           "Implemented DICOMDIR functionality enabling hierarchical navigation across patient, study, series, and image levels in WSI viewers",
           "Refactored post-processing service with PEP 8 compliant code, reducing debugging time by 40-50% through standardized sanity checks and validations",
-          "Integrated JPEG XL compression achieving 25–30% smaller file sizes while preserving diagnostic quality, enhancing storage efficiency for large-scale datasets"
+          "Integrated JPEG XL compression achieving 25-30% smaller file sizes while preserving diagnostic quality, enhancing storage efficiency for large-scale datasets"
         ]
       }
     ],
@@ -102,7 +101,7 @@ export default function Portfolio() {
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 80; // Adjust this value based on your header height
+      const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -272,9 +271,8 @@ export default function Portfolio() {
             <div className="flex gap-4 justify-center">
               <a 
                 href={portfolioData.resume}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2"
+                 download
+                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2"
               >
                 <Download size={20} />
                 Download Resume
