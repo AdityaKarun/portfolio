@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Mail, Github, Linkedin, ExternalLink, Code, Briefcase, User, Send, Download, MapPin, Menu, X } from 'lucide-react';
+import { Moon, Sun, Mail, Github, Linkedin, ExternalLink, Download, MapPin, Menu, X } from 'lucide-react';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
